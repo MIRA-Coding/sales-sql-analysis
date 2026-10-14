@@ -1,5 +1,5 @@
 .venv/
 .vscode/
 *.db
-*.sales.db
-*.sales.session.sql
+*sales.db
+*sales.session.sql
