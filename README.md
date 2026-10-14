@@ -1,6 +1,6 @@
 # Sales SQL Analysis
 
-A small SQL project that answers 7 business questions on a 3-table sales dataset
+A small SQL project that answers 13 business questions on a 3-table sales dataset
 (customers, products, orders): revenue by city, best customer, products never sold, and more.
 
 ## What I did
@@ -9,13 +9,20 @@ A small SQL project that answers 7 business questions on a 3-table sales dataset
 - Checked every result against the total revenue (16,750) to catch JOIN mistakes.
 
 ## How to run
+
+Requires Python 3 and the `sqlite3` command-line tool
+(preinstalled on macOS; on Windows, install it from sqlite.org).
+Run the commands from the project root.
+
 ```bash
-python setup_db.py
-sqlite3 sales.db < queries/02_revenue_by_city.sql
+python setup_db.py        # use python3 on macOS/Linux if needed
+sqlite3 -header -column sales.db ".read queries/04_total_profit_by_city.sql"
 ```
 
+Or open any `.sql` file in VS Code with the SQLTools extension and click **Run**.
+
 ## Example result
-| city | revenue |
+| city | profit_of_city |
 |---|---|
 | Cairo | 13200 |
 | Giza | 2550 |
